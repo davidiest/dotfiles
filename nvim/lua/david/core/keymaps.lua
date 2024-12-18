@@ -10,6 +10,16 @@ local function toggleNumbers()
 	end
 end
 
+-- local function toggleWordWrap()
+--
+--     local isWrapped = false
+--
+--     if (!isWrapped) then
+--
+--     end
+--
+-- end
+
 keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open file tree" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
@@ -25,4 +35,5 @@ keymap.set("n", "<leader>sl", "<C-w>l", { desc = "Jump to split window right" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Jump to split window right" })
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jump to split window right" })
 
+-- keymap.set("n", "<leader>ln", toggleNumbers, { desc = "Toggle line numbers", noremap = true })
 keymap.set("n", "<leader><leader>", toggleNumbers, { desc = "Toggle line numbers", noremap = true })
