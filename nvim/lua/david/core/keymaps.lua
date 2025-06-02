@@ -37,3 +37,8 @@ keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jump to split window right" })
 
 -- keymap.set("n", "<leader>ln", toggleNumbers, { desc = "Toggle line numbers", noremap = true })
 keymap.set("n", "<leader><leader>", toggleNumbers, { desc = "Toggle line numbers", noremap = true })
+
+-- keymap.set("n", "n", "j")
+-- keymap.set("n", "e", "k")
+-- keymap.set("n", "h", "h")
+-- keymap.set("n", "i", "l")

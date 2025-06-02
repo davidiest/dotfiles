@@ -45,6 +45,7 @@ return {
 				"query",
 				"vimdoc",
 				"c",
+				"go",
 			},
 		})
 	end,

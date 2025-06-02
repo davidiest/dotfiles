@@ -152,6 +152,18 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+
+			["pylsp"] = function()
+				lspconfig["pylsp"].setup({
+					capabilities = capabilities,
+				})
+			end,
+
+			["docker_compose_language_service"] = function()
+				lspconfig["docker_compose_language_service"].setup({
+					capabilities = capabilities,
+				})
+			end,
 		})
 	end,
 }

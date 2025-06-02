@@ -27,7 +27,20 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
+				lualine_c = {
+					{
+						"filename",
+						path = 1, -- Show relative path
+						fmt = function(filepath)
+							local parts = vim.split(filepath, "/")
+							local len = #parts
+							if len >= 2 then
+								return parts[len - 1] .. "/" .. parts[len]
+							end
+							return filepath
+						end,
+					},
+				},
 				lualine_x = { "encoding", "fileformat", "filetype" },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
@@ -35,7 +48,20 @@ return {
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { "filename" },
+				lualine_c = {
+					{
+						"filename",
+						path = 1, -- Show relative path
+						fmt = function(filepath)
+							local parts = vim.split(filepath, "/")
+							local len = #parts
+							if len >= 2 then
+								return parts[len - 1] .. "/" .. parts[len]
+							end
+							return filepath
+						end,
+					},
+				},
 				lualine_x = { "location" },
 				lualine_y = {},
 				lualine_z = {},

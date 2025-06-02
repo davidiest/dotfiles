@@ -14,17 +14,19 @@ return {
 
 	config = function()
 		local telescope = require("telescope")
-		local actions = require("telescope.actions")
 		local builtin = require("telescope.builtin")
+		local actions = require("telescope.actions")
 
 		telescope.setup({
 
 			defaults = {
-				path_display = { "smart" },
+				-- path_display = { "smart" },
 				file_ignore_patterns = {
 					"node_modules",
-					"vendor",
+					-- "vendor",
 					"dist",
+					".git",
+					".next",
 				},
 			},
 
@@ -32,6 +34,12 @@ return {
 				find_files = {
 					hidden = true,
 				},
+			},
+			extensions = {
+				fuzzy = true, -- false will only do exact matching
+				override_generic_sorter = true, -- override the generic sorter
+				override_file_sorter = true, -- override the file sorter
+				case_mode = "smart_case", -- or "ignore_case" or "respect_case"
 			},
 		})
 
